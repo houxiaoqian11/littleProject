@@ -1,0 +1,1161 @@
+!SESSION 2018-02-05 14:41:24.464 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-05 14:41:33.270
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 14:46:32.742
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at jar:file:/E:/QQDownload/jbosstools-4.2.0.Beta3_2014-07-22_16-09-46-B136-updatesite-hibernatetools.zip!/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-02-05 14:46:32.742
+!MESSAGE No repository found at jar:file:/E:/QQDownload/jbosstools-4.2.0.Beta3_2014-07-22_16-09-46-B136-updatesite-hibernatetools.zip!/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 14:48:32.472
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at org.eclipse.equinox.internal.p2.operations.PlannerResolutionJob.runModal(PlannerResolutionJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:115)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.ProvisioningOperationWizard$2.run(ProvisioningOperationWizard.java:290)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-02-05 14:48:32.472
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 14:49:39.908
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-02-05 14:49:39.908
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 14:53:00.542
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 14:53:00.542
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.542
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.542
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.542
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 14:53:00.542
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.542
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.542
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 14:53:00.549
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 14:53:00.549
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.549
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.549
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.549
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 14:53:00.549
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.549
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.549
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 14:53:00.562
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 14:53:00.562
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.562
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.562
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.562
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 14:53:00.562
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.562
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.562
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 14:53:00.566
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 14:53:00.566
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.566
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.566
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 14:53:00.566
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 14:53:00.566
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.566
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 14:53:00.566
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 14:55:16.487
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:91)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:104)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:174)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:79)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1000 2018-02-05 14:55:16.487
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 14:56:28.067
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:91)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:104)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:174)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:79)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1000 2018-02-05 14:56:28.068
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2018-02-05 14:59:51.149
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2018-02-05 14:59:51.149
+!MESSAGE session context was:(profile=epp.package.jee, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.149
+!MESSAGE No repository found containing: osgi.bundle,org.apache.commons.io,2.4.0
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.149
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.ide,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.core,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.identity.core,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.net,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.notifications.core,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.notifications.feed,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.notifications.ui,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.repositories.core,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.repositories.ui,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.screenshots,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.ui,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.workbench,3.23.0.v20170503-0014
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.xmlrpc,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.context.core,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.context.tasks.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.context.ui,3.23.0.v20170414-0629
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.debug.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.discovery.core,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.discovery.ui,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.help.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.ide.ant,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.ide.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.java.tasks,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.java.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.monitor.core,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.monitor.ui,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.resources.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.bugs,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.index.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.index.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.search,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.team.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,com.google.guava,21.0.0.v20170206-1425
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.apache.commons.codec,1.9.0.v20170208-1614
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.analyzers-common,6.1.0.v20161115-1612
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.core,6.1.0.v20161115-1612
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.queryparser,6.1.0.v20161115-1612
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.bugzilla_feature,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons,3.23.0.v20170503-0014
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons.identity,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons.notifications,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons.repositories,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.150
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.context_feature,3.23.0.v20170414-0629
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.discovery,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.ide_feature,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.java_feature,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.monitor,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.tasks.ide,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.team_feature,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 14:59:51.151
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn_feature,3.23.1.v20170623-0008
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 15:02:13.900
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-02-05 15:02:13.900
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-02-05 15:02:53.451
+!MESSAGE Connection to http://dl.bintray.com/nodeclipse/nodeclipse/1.0.2f/p2.index failed on Connection to http://dl.bintray.com refused. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.HttpHostConnectException: Connection to http://dl.bintray.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:84)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 11 more
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 15:03:35.637
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-02-05 15:03:35.637
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 15:03:41.251
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at jar:file:/E:/QQDownload/jbosstools-4.2.0.Beta3_2014-07-22_16-09-46-B136-updatesite-hibernatetools.zip!/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-02-05 15:03:41.251
+!MESSAGE No repository found at jar:file:/E:/QQDownload/jbosstools-4.2.0.Beta3_2014-07-22_16-09-46-B136-updatesite-hibernatetools.zip!/.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 15:09:04.461
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 15:09:04.461
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.461
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.461
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.461
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 15:09:04.461
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.461
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.461
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 15:09:04.468
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 15:09:04.468
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.468
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.468
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.468
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 15:09:04.468
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.468
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.468
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 15:09:04.836
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 15:09:04.836
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.836
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.836
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.836
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 15:09:04.836
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.836
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.836
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2018-02-05 15:09:04.839
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2018-02-05 15:09:04.840
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.840
+!MESSAGE "Git integration for Eclipse" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.840
+!MESSAGE "Java implementation of Git" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2018-02-05 15:09:04.840
+!MESSAGE "Git integration for Eclipse - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-02-05 15:09:04.840
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.840
+!MESSAGE Software being installed: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-02-05 15:09:04.840
+!MESSAGE Missing requirement: Git integration for Eclipse - auto-import for Eclipse >= 4.6 4.10.0.201712302008-r (org.eclipse.egit.ui.smartimport 4.10.0.201712302008-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 15:32:36.620
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:91)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:104)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:174)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:79)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1000 2018-02-05 15:32:36.620
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.2.5-20110915223420/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-05 15:33:50.255
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:91)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:104)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:174)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:79)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1000 2018-02-05 15:33:50.256
+!MESSAGE No repository found at http://download.jboss.org/jbosstools/updates/requirements/webtools/3.3.2-20120210195245/.
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2018-02-05 15:33:52.248
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2018-02-05 15:33:52.248
+!MESSAGE session context was:(profile=epp.package.jee, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.apache.commons.io,2.4.0
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.ide,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.core,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.identity.core,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.248
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.net,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.notifications.core,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.notifications.feed,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.notifications.ui,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.repositories.core,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.repositories.ui,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.screenshots,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.249
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.ui,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.workbench,3.23.0.v20170503-0014
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.commons.xmlrpc,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.context.core,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.context.tasks.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.context.ui,3.23.0.v20170414-0629
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.debug.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.discovery.core,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.discovery.ui,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.help.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.ide.ant,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.ide.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.java.tasks,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.java.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.monitor.core,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.monitor.ui,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.250
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.resources.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.251
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.bugs,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.252
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.index.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.index.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.search,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.team.ui,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,com.google.guava,21.0.0.v20170206-1425
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.apache.commons.codec,1.9.0.v20170208-1614
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.analyzers-common,6.1.0.v20161115-1612
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.core,6.1.0.v20161115-1612
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.queryparser,6.1.0.v20161115-1612
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.bugzilla_feature,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons,3.23.0.v20170503-0014
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons.identity,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons.notifications,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.commons.repositories,1.15.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.context_feature,3.23.0.v20170414-0629
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.256
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.discovery,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.258
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.ide_feature,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.258
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.java_feature,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.258
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.monitor,3.23.0.v20170411-1844
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.258
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.tasks.ide,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.258
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.team_feature,3.23.0.v20170411-2108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2018-02-05 15:33:52.258
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn_feature,3.23.1.v20170623-0008
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-02-05 15:40:49.471
+!MESSAGE Clipboard content is neither a directory path nor a valid git URI
+!SESSION 2018-02-05 16:21:10.703 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-05 16:21:15.798
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-02-05 16:23:04.125
+!MESSAGE houxiaoqian@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: houxiaoqian@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:196)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:99)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:324)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: houxiaoqian@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:248)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:147)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:175)
+	... 3 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 7 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-02-05 16:23:52.793
+!MESSAGE git@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:196)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:99)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:324)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:248)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:147)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:175)
+	... 3 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 7 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-02-05 16:32:32.652
+!MESSAGE git@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:196)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:99)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:324)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@git.kanzhun-inc.com:kanzhun/techwolf-kanzhun.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:248)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:147)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:175)
+	... 3 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 7 more
+!SESSION 2018-02-05 17:53:48.149 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-05 17:53:56.891
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-06 09:20:55.542 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-06 09:21:12.597
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-06 19:02:25.889 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-06 19:03:04.405
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-06 19:08:14.575 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-06 19:08:20.280
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2018-02-06 19:13:02.142
+!MESSAGE Could not auto-share project jdk-src
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“jdk-src”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2018-02-06 19:13:02.143
+!MESSAGE 提供的 SVN 信息与磁盘上“jdk-src”项目的信息不相匹配。
+
+!ENTRY org.eclipse.jdt.core 4 4 2018-02-06 19:16:51.210
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at org.eclipse.jdt.internal.compiler.ast.IntLiteral.buildIntLiteral(IntLiteral.java:54)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.consumeToken(Parser.java:8936)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:10992)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:11379)
+	at org.eclipse.jdt.internal.compiler.ast.MethodDeclaration.parseStatements(MethodDeclaration.java:184)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.parseMethods(TypeDeclaration.java:873)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.getMethodBodies(Parser.java:10073)
+	at org.eclipse.jdt.internal.compiler.SourceElementParser.parseCompilationUnit(SourceElementParser.java:963)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:108)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:76)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:504)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:984)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:405)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-06 19:16:52.061
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.OutOfMemoryError: GC overhead limit exceeded)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at org.eclipse.swt.widgets.EventTable.hook(EventTable.java:48)
+	at org.eclipse.swt.widgets.Widget._addListener(Widget.java:160)
+	at org.eclipse.swt.widgets.Widget.addListener(Widget.java:195)
+	at org.eclipse.swt.widgets.Widget.addDisposeListener(Widget.java:221)
+	at org.eclipse.e4.ui.css.swt.engine.CSSSWTEngineImpl.hookNativeWidget(CSSSWTEngineImpl.java:55)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.getElement(AbstractCSSEngine.java:859)
+	at org.eclipse.e4.ui.css.swt.engine.AbstractCSSSWTEngineImpl.getElement(AbstractCSSSWTEngineImpl.java:98)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyles(AbstractCSSEngine.java:360)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyles(AbstractCSSEngine.java:354)
+	at org.eclipse.e4.ui.css.swt.engine.CSSSWTApplyStylesListener$1.handleEvent(CSSSWTApplyStylesListener.java:32)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4346)
+	at org.eclipse.swt.widgets.Display.runSkin(Display.java:4255)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1288)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1276)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:665)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:623)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:586)
+	at org.eclipse.ui.internal.statushandlers.InternalDialog.createButtonBar(InternalDialog.java:633)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:769)
+	at org.eclipse.jface.window.Window.create(Window.java:435)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1101)
+	at org.eclipse.ui.internal.statushandlers.WorkbenchStatusDialogManagerImpl.doAddStatusAdapter(WorkbenchStatusDialogManagerImpl.java:261)
+	at org.eclipse.ui.internal.statushandlers.WorkbenchStatusDialogManagerImpl.addStatusAdapter(WorkbenchStatusDialogManagerImpl.java:198)
+	at org.eclipse.ui.statushandlers.WorkbenchStatusDialogManager.addStatusAdapter(WorkbenchStatusDialogManager.java:158)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.showStatusAdapter(WorkbenchErrorHandler.java:105)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.access$0(WorkbenchErrorHandler.java:98)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler$1.run(WorkbenchErrorHandler.java:65)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+
+!ENTRY org.eclipse.jdt.core 4 4 2018-02-06 19:16:52.526
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at org.eclipse.jdt.internal.compiler.ast.IntLiteral.buildIntLiteral(IntLiteral.java:54)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.consumeToken(Parser.java:8936)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:10992)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:11379)
+	at org.eclipse.jdt.internal.compiler.ast.MethodDeclaration.parseStatements(MethodDeclaration.java:184)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.parseMethods(TypeDeclaration.java:873)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.getMethodBodies(Parser.java:10073)
+	at org.eclipse.jdt.internal.compiler.SourceElementParser.parseCompilationUnit(SourceElementParser.java:963)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:108)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:76)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:504)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:984)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:405)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-06 19:16:52.542
+!MESSAGE Error occurred during status handling
+!STACK 0
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at org.eclipse.swt.widgets.EventTable.hook(EventTable.java:48)
+	at org.eclipse.swt.widgets.Widget._addListener(Widget.java:160)
+	at org.eclipse.swt.widgets.Widget.addListener(Widget.java:195)
+	at org.eclipse.swt.widgets.Widget.addDisposeListener(Widget.java:221)
+	at org.eclipse.e4.ui.css.swt.engine.CSSSWTEngineImpl.hookNativeWidget(CSSSWTEngineImpl.java:55)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.getElement(AbstractCSSEngine.java:859)
+	at org.eclipse.e4.ui.css.swt.engine.AbstractCSSSWTEngineImpl.getElement(AbstractCSSSWTEngineImpl.java:98)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyles(AbstractCSSEngine.java:360)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyles(AbstractCSSEngine.java:354)
+	at org.eclipse.e4.ui.css.swt.engine.CSSSWTApplyStylesListener$1.handleEvent(CSSSWTApplyStylesListener.java:32)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4346)
+	at org.eclipse.swt.widgets.Display.runSkin(Display.java:4255)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1288)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1276)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:665)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:623)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:586)
+	at org.eclipse.ui.internal.statushandlers.InternalDialog.createButtonBar(InternalDialog.java:633)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:769)
+	at org.eclipse.jface.window.Window.create(Window.java:435)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1101)
+	at org.eclipse.ui.internal.statushandlers.WorkbenchStatusDialogManagerImpl.doAddStatusAdapter(WorkbenchStatusDialogManagerImpl.java:261)
+	at org.eclipse.ui.internal.statushandlers.WorkbenchStatusDialogManagerImpl.addStatusAdapter(WorkbenchStatusDialogManagerImpl.java:198)
+	at org.eclipse.ui.statushandlers.WorkbenchStatusDialogManager.addStatusAdapter(WorkbenchStatusDialogManager.java:158)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.showStatusAdapter(WorkbenchErrorHandler.java:105)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.access$0(WorkbenchErrorHandler.java:98)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler$1.run(WorkbenchErrorHandler.java:65)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+!SESSION 2018-02-07 09:13:46.320 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-07 09:13:57.518
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-07 09:14:40.602
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-07 21:16:24.139 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-07 21:16:34.127
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-08 14:22:26.848 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-08 14:22:46.985
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-08 18:12:20.913 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-08 18:12:30.551
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-09 17:24:21.603 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-09 17:24:34.504
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2018-02-09 17:25:03.588
+!MESSAGE Could not auto-share project test
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“test”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2018-02-09 17:25:03.614
+!MESSAGE 提供的 SVN 信息与磁盘上“test”项目的信息不相匹配。
+!SESSION 2018-02-23 21:20:44.177 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-23 21:20:47.959
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-23 21:21:14.690
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-26 20:53:20.720 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-26 20:53:32.569
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:29.825
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:29.850
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:29.853
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:29.856
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:29.860
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:29.864
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:32.557
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:32.561
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:32.564
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:32.568
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:32.572
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:32.576
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:49.555
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:49.583
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:49.586
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:49.589
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:49.592
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2018-02-26 20:59:49.595
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
