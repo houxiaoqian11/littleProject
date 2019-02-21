@@ -1,0 +1,67 @@
+<!--pages/order/detail.wxml-->
+<view class="w100">
+		<view class="p_all bg_white df item">
+			<view class="cp_photo">			
+				<image src="{{orderData.picture}}"></image>
+			</view>
+			<view class="df_1">	
+				<view class="font_14 mt5 ovh1">
+		      {{orderData.productName}}
+		    </view>
+			  <text class="gm_ovh_1h red pt10">¥{{orderData.price}}</text>
+			  <view class="sl">
+		        数量：{{orderData.number}} 颜色：{{orderData.color}} 尺寸：{{orderData.size}}
+		    </view>
+			</view>
+		</view>		
+		
+		<view class="p_all bg_white mt10 font_14">
+			<view class="df">
+				<view class="df_1 c6">
+				<view class="l_h20">收货人：{{orderData.name}}<text class="fl_r mr10">{{orderData.phone}}</text></view>
+				<view class="l_h20 mt5">地址：{{orderData.addressInfo}}</view>
+				</view>
+			</view>
+		</view>	
+
+		<view class="p_all bg_white mt10 c6 l_h20  font_14">
+			<view wx:if="{{orderData.status==0}}">
+			订单状态：<text class="red">待付款</text>
+			</view>
+			
+			<view wx:if="{{orderData.status==1}}">
+			订单状态：<text class="red">待发货</text>
+			</view>
+			
+			<view wx:if="{{orderData.status==2}}">
+			订单状态：<text class="red">待收货</text>
+			物流编号：{{orderData.wuliuNo}}
+			</view>
+			
+			<view wx:if="{{orderData.status==3}}">
+			订单状态：<text class="red">已完成</text>
+			物流编号：{{orderData.wuliuNo}}
+			</view>
+	
+			<view class="mt10">
+			订单时间：{{orderTime}}
+			</view>         
+		    </view>
+
+           <view class="p_all bg_white mt10 font_14">
+			<textarea class="min_60" auto-height name="remark" disabled="{{true}}" placeholder="订单备注" value="{{orderData.remark?orderData.remark:'未备注'}}"/> 
+		</view>	
+
+	<view class="zhifu mt10 tc">金额：<span class="font_20 red">¥ {{orderData.totalPrice}}</span></view>
+        
+
+	<view class="p_all mt10">
+		<view class="btnGreen">
+			        <!-- <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="warn"> 确认 </button> -->
+        		<!--<contact-button type="default-light" session-from="orderNo_{{orderData.OrderNo}}">
+		        客服
+		        </contact-button>-->
+		</view>
+	</view>
+</view>

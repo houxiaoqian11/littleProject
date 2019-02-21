@@ -1,78 +1,98 @@
 // pages/user/user.js
 var app = getApp()
-Page({
+Page( {
   data: {
-    motto: 'Hello World',
-    userInfo: {}
-  },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    userInfo: {},
+    orderInfo:{},
+    userListInfo: [ {
+        icon: '../../images/iconfont-dingdan.png',
+        text: '我的订单',
+        isunread: true,
+        unreadNum: 2
+      }, {
+        icon: '../../images/iconfont-card.png',
+        text: '我的代金券',
+        isunread: false,
+        unreadNum: 2
+      }, {
+        icon: '../../images/iconfont-icontuan.png',
+        text: '我的拼团',
+        isunread: true,
+        unreadNum: 1
+      }, {
+        icon: '../../images/iconfont-shouhuodizhi.png',
+        text: '收货地址管理'
+      }, {
+        icon: '../../images/iconfont-kefu.png',
+        text: '联系客服'
+      }, {
+        icon: '../../images/iconfont-help.png',
+        text: '常见问题'
+      }],
+       loadingText: '加载中...',
+       loadingHidden: false,
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo) {
-      //更新数据
-      console.log("获取用户信息成功!")
-      that.setData({
-        userInfo: userInfo
-      })
-    })
-  },
-  onShareAppMessage: function (e) {
-    return {
-      title: "猴哥数码城",
-      desc: "我做的一个小程序"
-    }
-  },
-  onPullDownRefresh: function () {
-    var that = this
-    setTimeout(function () {
-      wx.stopPullDownRefresh();
-      console.log("stoppull")
+      var that = this
       //调用应用实例的方法获取全局数据
-      app.getUserInfo(function (userInfo) {
+      app.getUserInfo(function(userInfo){
         //更新数据
-        console.log("获取用户信息成功!")
         that.setData({
-          userInfo: userInfo
+          userInfo:userInfo,
+          loadingHidden: true
         })
-      })
-    }, 2000)
-  },
-  showUserTip: function () {
-    wx.showModal({
-      content: "用户信息与微信绑定,无需编辑,无需上心!若您有强迫症,请前往雷电法王杨永信专家的治疗所,保证治好,不好不要钱!",
-      showCancel: false,
-      confirmText: "知道了"
-    })
-  },
+      });
 
-  navigateToAddr: function () {
-    wx.navigateTo({
-      url: '../addr/addr'
-    })
+      this.loadOrderStatus();
   },
-  navigateToOrder: function () {
-    
-    wx.navigateTo({
-      url: './order/order?typeId=0'
-    })
+  onShow:function(){
+    this.loadOrderStatus();
   },
-  navigateToOrder_pay: function () {
-   
-    wx.navigateTo({
-      url: './order/order?typeId=1'
-    })
+  loadOrderStatus:function(){
+    //获取用户订单数据
+    var that = this;
+    wx.request({
+      url: 'https://www.hxqzsr.club/peakshop/order/getNum.do',
+      method:'post',
+      data: {
+        userId:app.d.userId,
+      },
+      header: {
+        'Content-Type':  'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        //--init data        
+        var status = res.data.status;
+        if(status==1){
+          var orderInfo = res.data.orderInfo;
+          that.setData({
+            orderInfo: orderInfo
+          });
+        }else{
+          wx.showToast({
+            title: '非法操作.',
+            duration: 2000
+          });
+        }
+      },
+      error:function(e){
+        wx.showToast({
+          title: '网络异常！',
+          duration: 2000
+        });
+      }
+    });
   },
-  navigateToOrder_get: function () {
-    
-    wx.navigateTo({
-      url: './order/order?typeId=2'
-    })
+  onShareAppMessage: function () {
+    return {
+      title: '宠物美容学校',
+      path: '/pages/index/index',
+      success: function (res) {
+        // 分享成功
+      },
+      fail: function (res) {
+        // 分享失败
+      }
+    }
   }
 })

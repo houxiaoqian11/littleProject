@@ -1,93 +1,30 @@
 // pages/addr/addr.js
+var app = getApp();
 Page({
   data: {
-    addrlist: [
-      {
-        id: 1,
-        name: "大全",
-        phone: "18670321728",
-        postNo: "41000",
-        province: "湖南",
-        city: "长沙",
-        area: "开福区",
-        street: "湘江中路",
-        desc: "重建十号地8栋栋2单元501",
-        isDefault: true,
-        isLast: false
-      },
-      {
-        id: 2,
-        name: "大全2",
-        phone: "18670321728",
-        postNo: "41000",
-        province: "湖南",
-        city: "长沙",
-        area: "开福区",
-        street: "湘江中路",
-        desc: "重建十号地8栋栋2单元501",
-        isDefault: false,
-        isLast: false
-      },
-      {
-        id: 4,
-        name: "大全4",
-        phone: "18670321728",
-        postNo: "41000",
-        province: "湖南",
-        city: "长沙",
-        area: "开福区",
-        street: "湘江中路",
-        desc: "重建十号地8栋栋2单元501",
-        isDefault: false,
-        isLast: false
-      },
-      {
-        id: 3,
-        name: "大全3",
-        phone: "18670321728",
-        postNo: "41000",
-        province: "湖南",
-        city: "长沙",
-        area: "开福区",
-        street: "湘江中路",
-        desc: "重建十号地8栋栋2单元501",
-        isDefault: false,
-        isLast: false
-      },
-      {
-        id: 5,
-        name: "大全5",
-        phone: "18670321728",
-        postNo: "41000",
-        province: "湖南",
-        city: "长沙",
-        area: "开福区",
-        street: "湘江中路",
-        desc: "重建十号地8栋栋2单元501",
-        isDefault: false,
-        isLast: true
-      },
-    ]
+    addrlist: []
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    this.updateAddr();
   },
   updateAddr: function () {
     var that = this;
+    var userId = app.d.userId;
     wx.showToast({
       title: "Loading...",
       icon: "loading",
       duration: 300000
     })
     wx.request({
-      url: 'http://123.207.30.64:8080/Wxmini/addr_getlist.do',
+      url: 'https://www.hxqzsr.club/peakshop/address/getlist.do?userId=' + userId,
       //data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function (res) {
-        console.log('getlist:',res.data)
-        for (var i = 0; i < res.data.length; i++) {
-          var addr = res.data[i];
+        console.log('getlist:', res.data)
+        for (var i = 0; i < res.data.addrlist.length; i++) {
+          var addr = res.data.addrlist[i];
           if (i == res.data.length - 1) {
             addr.isLast = true;
           } else {
@@ -95,7 +32,7 @@ Page({
           }
         }
         that.setData({
-          addrlist: res.data
+          addrlist: res.data.addrlist
         })
       },
       fail: function () {
@@ -142,7 +79,8 @@ Page({
   beDefault: function (e) {
     //console.log(e.target)
     var id = e.target.dataset.id;
-    var flag = e.detail.value
+    var flag = e.detail.value;
+    var userId = app.d.userId;
     if (flag) {
       console.log(id)
       wx.showToast({
@@ -152,7 +90,7 @@ Page({
       })
       var that = this;
       wx.request({
-        url: 'http://123.207.30.64:8080/Wxmini/addr_bedefault.do?id=' + id,
+        url: 'https://www.hxqzsr.club/peakshop/address/bedefault.do?id=' + id + '&userId=' + userId,
         // data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         header: {
@@ -227,7 +165,7 @@ Page({
             duration: 900000
           })
           wx.request({
-            url: 'http://123.207.30.64:8080/Wxmini/addr_del.do?id=' + id,
+            url: 'https://www.hxqzsr.club/peakshop/address/del.do?id=' + id,
             data: {},
             method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
             // header: {}, // 设置请求的 header

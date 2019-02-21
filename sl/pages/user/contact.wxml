@@ -1,0 +1,28 @@
+<!--pages/order/detail.wxml-->
+<view class="w100">
+
+
+  <view class="p_all bg_white mt10 font_14">
+    <view class="df">
+      <view class="df_1 c6">
+        <view class="l_h20">商家地址：{{merchantInfo.address}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="p_all bg_white mt10 c6 l_h20  font_14">
+    <view>
+      商家手机：{{merchantInfo.phone}}
+    </view>
+
+    <view>
+      商家微信：{{merchantInfo.weixin}}
+    </view>
+    <view class="mt10">
+      商家邮箱：{{merchantInfo.email}}
+    </view>
+    <view class="mt10">
+      商家QQ：{{merchantInfo.qq}}
+    </view>
+  </view>
+</view>

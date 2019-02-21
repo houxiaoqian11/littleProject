@@ -1,4 +1,4 @@
-/* pages/index/good/good.wxss */
+/* pages/index/product/product.wxss */
 
 #search {
   top: 0px;
@@ -43,14 +43,14 @@
   color: orangered;
 }
 
-#goodlist {
+#productlist {
   clear: both;
   margin: 00rpx 10px;
   padding-bottom: 40rpx;
   font-size: 14px;
 }
 
-.good-head {
+.product-head {
   padding: 10rpx 0px;
   padding-left: 10rpx;
   font-size: 20px;
@@ -68,26 +68,27 @@
   background: url(../../image/typemore.png) no-repeat 45rpx center;
 }
 
-.good-body {
+.product-body {
   padding: 10rpx 0px;
 }
 
-.good-item {
+.product-item {
   padding: 10rpx 10rpx;
   width: 335rpx;
   float: left;
 }
 
-.good-pic image {
+.product-pic image {
   width: 335rpx;
   height: 300rpx;
 }
 
-.good-title {
-  padding: 10rpx 0px;
+.product-title {
   font-size: 12px;
+  width: 100%;
+  overflow: hidden;
 }
 
-.good-price {
+.product-price {
   color: orangered;
 }

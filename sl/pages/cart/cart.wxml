@@ -6,53 +6,50 @@
       <block wx:if="{{cartlist==null||cartlist.length==0}}">
         <view id='nothing'>购物车空空的,去<navigator url="../index/index" open-type="switchTab">首页</navigator> 逛逛吧!</view>
       </block>
-      <block wx:for="{{cartlist}}">
+      <block wx:for="{{cartlist}}" wx:key="id">
         <view class="list-item">
           <view class='item-head'>
-            <switch type="checkbox" checked="{{item.checked}}" bindchange="checkItem" data-id="{{item.id}}" />
-            <text bindtap="navigateToShopView" data-id="{{item.good.type.id}}">{{item.good.type.name}}</text>
-            <text class='right' bindtap="changeMode" data-id="{{item.id}}">
+            <switch type="checkbox" checked="{{item.cart.checked}}" bindchange="checkItem" data-id="{{item.cart.id}}" />
+            <text bindtap="navigateToGoodView" data-id="{{item.product.id}}">{{item.product.name}}</text>
+            <text class='right' bindtap="changeMode" data-id="{{item.cart.id}}">
               <text class='gray'>|</text>
-              <block wx:if="{{item.mode==0}}">
+              <block wx:if="{{item.cart.mode==0}}">
                 <text>编辑</text>
               </block>
-              <block wx:if="{{item.mode==1}}">
+              <block wx:if="{{item.cart.mode==1}}">
                 <text>完成</text>
               </block>
             </text>
           </view>
-          <view class='item-body' bindtap="navigateToGoodView" data-id="{{item.good.id}}">
+          <view class='item-body' bindtap="navigateToGoodView" data-id="{{item.product.id}}">
             <view class='body-left'>
-              <image src="../../image/v500.png" mode="aspectFill" style='width:210rpx; height:210rpx;'></image>
+              <image src="{{item.product.picture}}" mode="aspectFill" style='width:210rpx; height:210rpx;'></image>
             </view>
-            <block wx:if="{{item.mode==0}}">
+            <block wx:if="{{item.cart.mode==0}}">
               <view class='body-right'>
-                <view class='right-head'>
-                  {{item.good.title}}
+                <view class='right-middle'>
+                  颜色 : {{item.color.name}}
                 </view>
                 <view class='right-middle'>
-                  套餐类型 : {{item.good.tcs[item.good.tc]}}
+                  尺码 : {{item.size.name}}
                 </view>
                 <view class='right-foot'>
-                  <text class='red'>$ {{item.good.tcprices[item.good.tc]}} </text>
-                  <text class='middleline'>$ {{item.good.prevprice}}</text>
-                  <text class='right'>× {{item.num}}</text>
+                  <text class='red'>$ {{item.product.price}} </text>
+                  <text class='right'>× {{item.cart.number}}</text>
                 </view>
               </view>
             </block>
-            <block wx:if="{{item.mode==1}}">
+            <block wx:if="{{item.cart.mode==1}}">
               <view class='body-hidden' catchtap="222" >
                 <view class='hidden-left'>
                   <view class='hidden-top'>
-                    <text class='jian' catchtap='delNum' data-id="{{item.id}}">－</text>
-                    <text>{{item.num}}</text>
-                    <text class='jia' catchtap="addNum" data-id="{{item.id}}">＋</text>
-                  </view>
-                  <view class="hidden-foot">
-                    <picker mode="selector" bindchange="changeTc" data-id="{{item.id}}" range="{{item.good.tcs}}" value="{{item.good.tc}}">套餐类型 : {{item.good.tcs[item.good.tc]}}</picker>
+                    <text>商品数量</text>
+                    <text class='jian' catchtap='delNum' data-id="{{item.cart.id}}">－</text>
+                    <text>{{item.cart.number}}</text>
+                    <text class='jia' catchtap="addNum" data-id="{{item.cart.id}}">＋</text>
                   </view>
                 </view>
-                <view class='hidden-right' catchtap="delItem" data-id="{{item.id}}">
+                <view class='hidden-right' catchtap="delItem" data-id="{{item.cart.id}}">
                   删除
                 </view>
               </view>
@@ -68,7 +65,7 @@
       <text class='ctr'>全选</text>
     </view>
     <view id='submit' bindtap='submitCart'>
-      结算({{totalCount}})
+      结算
     </view>
     <view id='total'>
       合计:

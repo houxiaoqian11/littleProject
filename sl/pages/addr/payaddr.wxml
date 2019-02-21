@@ -1,0 +1,19 @@
+<view style='background:#eee;'>
+
+  <!--pages/addr/addr.wxml-->
+  <scroll-view id='addrlist' scroll-y>
+    <block wx:for="{{addrlist}}" wx:key="addr">
+
+      <view class='list-item'>
+			<span class="redio1"><switch type="redio" bindchange="navigateToPay" data-id="{{item.id}}"/></span>
+          <view class='item-head'>
+            <text>{{item.name}}</text>
+            <text class='right'>{{item.phone}}</text>
+          </view>
+          <view class='item-desc'>
+            <text>地址：{{item.address}}</text>
+          </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

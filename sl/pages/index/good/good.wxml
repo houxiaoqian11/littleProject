@@ -1,7 +1,7 @@
-<!--pages/index/good/good.wxml-->
+<!--pages/index/product/product.wxml-->
 <view >
     <view id='search'>
-        <form bindsubmit="searchGood">
+        <form bindsubmit="searchProduct">
             <input name='keyword' placeholder="请输入搜索关键字" type="text" maxlength="50" placeholder-style="color:red" />
             <button form-type="submit" size="mini" >搜索</button>
         </form>
@@ -10,12 +10,12 @@
         <scroll-view scroll-x style="width:100%;" >
             <block wx:for="{{typelist}}" wx:key="id">
                 <block wx:if="{{typeId==item.id}}">
-                    <view class='type-item active' catchtap="searchGoodByTypeId" data-id="{{item.id}}">
+                    <view class='type-item active' catchtap="searchProductByTypeId" data-id="{{item.id}}">
                         {{item.name}}
                     </view>
                 </block>
                 <block wx:if="{{typeId!=item.id}}">
-                    <view class='type-item' catchtap="searchGoodByTypeId" data-id="{{item.id}}">
+                    <view class='type-item' catchtap="searchProductByTypeId" data-id="{{item.id}}">
                         {{item.name}}
                     </view>
                 </block>
@@ -25,16 +25,16 @@
 
 
 
-    <view id='goodlist'>
-        <view class='good-body'>
-            <block wx:for="{{goodlist}}" wx:key="{{orderBy}}" wx:for-item="good">
-                <view class='good-item' bindtap="navigateToGood" data-id="{{good.id}}">
-                    <view class='good-pic'>
-                        <image src="{{good.pics[0]}}" mode="aspectFill"></image>
+    <view id='productlist'>
+        <view class='product-body'>
+            <block wx:for="{{productlist}}" wx:key="{{orderBy}}" wx:for-item="product">
+                <view class='product-item' bindtap="navigateToProduct" data-id="{{product.id}}">
+                    <view class='product-pic'>
+                        <image src="{{product.picture}}" mode="aspectFill"></image>
                     </view>
-                    <view class='good-desc'>
-                        <view class='good-title'>{{good.title}}</view>
-                        <text class='good-price'>$ {{good.price}}</text>
+                    <view class='product-desc'>
+                        <view class='product-title ovh1'>{{product.name}}</view>
+                        <text class='product-price'>$ {{product.price}}</text>
                     </view>
                 </view>
             </block>

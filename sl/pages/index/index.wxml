@@ -1,51 +1,129 @@
 <!--index.wxml-->
-<view >
-    <swiper id="banner" interval="2000" duration="1000" autoplay circular indicator-dots>
-        <swiper-item>
-            <image src="../../image/01.jpg" mode="scaleToFill" style="width:750rpx;"></image>
-        </swiper-item>
-        <swiper-item>
-            <image src="../../image/02.jpg" mode="scaleToFill" style="width:750rpx;"></image>
-        </swiper-item>
-        <swiper-item>
-            <image src="../../image/03.jpg" mode="scaleToFill" style="width:750rpx;"></image>
-        </swiper-item>
-    </swiper>
+<view>
+  <swiper id="banner" interval="2000" duration="1000" autoplay circular indicator-dots>
+    <swiper-item>
+      <image src="../../image/hot.jpg" mode="scaleToFill" style="width:750rpx;" bindtap="navigateToHot"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../image/discount.jpg" mode="scaleToFill" style="width:750rpx;" bindtap="navigateToDiscount"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../image/new.jpg" mode="scaleToFill" style="width:750rpx;" bindtap="navigateToNew" data-id="3"></image>
+    </swiper-item>
+  </swiper>
+   <view class="goto_counter"><button type="default" class="button gray" bindtap="goto_counter">点击观看门店视频>>></button></view>
 
-    <view id='types'>
-        <block wx:for="{{typelist}}" wx:key="id">
-            <view class='list-item' bindtap="navigateToShop" data-id="{{item.id}}">
-                <view class='item-head'>
-                    <image src="../../image/{{item.pic}}.png" mode="aspectFit"></image>
-                </view>
-                <view class='item-foot'>
-                    {{item.name}}
-                </view>
-            </view>
-        </block>
-    </view>
-
-    <block wx:for="{{typelist}}" wx:key="id">
-        <view class='goodlist'>
-            <view class='good-head'>
-                <text>{{item.name}}</text>
-                <text class='right more' bindtap="navigateToShop" data-id="{{item.id}}"> 1 </text>
-            </view>
-            <view class='good-body'>
-                <block wx:for="{{item.goods}}" wx:key="id" wx:for-item="good">
-                    <view class='good-item' bindtap="navigateToGood" data-id="{{good.id}}">
-                        <view class='good-pic'>
-                            <image src="{{good.pic}}" mode="aspectFill"></image>
-                        </view>
-                        <view class='good-desc'>
-                            <view class='good-title'>{{good.title}}</view>
-                            <text class='good-price'>$ {{good.price}}</text>
-                        </view>
-                    </view>
-                </block>
-            </view>
+  <view id='types'>
+    <block wx:for="{{typeList}}" wx:key="id">
+      <view class='list-item' bindtap="navigateToShop" data-id="{{item.id}}">
+        <view class='item-head'>
+          <image src="{{item.picture}}" mode="aspectFit"></image>
         </view>
+        <view class='item-foot'>
+          {{item.name}}
+        </view>
+      </view>
     </block>
+  </view>
 
+  <block>
+    <view class='productlist'>
+      <view class='product-head'>
+        <text>新品上市</text>
+        <navigator class="fl_r c9 font_12 l_h20" url="./new/new" hover-class="none" >查看更多商品 ></navigator>
+      </view>
+
+      <view class='product-body'>
+        <block wx:for="{{newProduct}}" wx:key="id" wx:for-item="newProduct" wx:for-index="index">
+          <view class='product-item' bindtap="navigateToProduct" data-id="{{newProduct.id}}">
+            <view class='product-pic'>
+              <image src="{{newProduct.picture}}" mode="aspectFill"></image>
+            </view>
+            <view class='product-desc'>
+              <view class='product-title'>{{newProduct.name}}</view>
+              <text class='product-price'>¥ {{newProduct.price}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  
+  <block>
+    <view class='productlist'>
+      <view class='product-head'>
+        <text>爆款热卖</text>
+        <navigator class="fl_r c9 font_12 l_h20" url="./hot/hot" hover-class="none" >查看更多商品 ></navigator>
+      </view>
+
+      <view class='product-body'>
+        <block wx:for="{{hotProduct}}" wx:key="id" wx:for-item="hotProduct" wx:for-index="index">
+          <view class='product-item' bindtap="navigateToProduct" data-id="{{hotProduct.id}}">
+            <view class='product-pic'>
+              <image src="{{hotProduct.picture}}" mode="aspectFill"></image>
+            </view>
+            <view class='product-desc'>
+              <view class='product-title'>{{hotProduct.name}}</view>
+              <text class='product-price'>¥ {{hotProduct.price}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  
+  <block>
+    <view class='productlist'>
+      <view class='product-head'>
+        <text>疯狂促销</text>
+        <navigator class="fl_r c9 font_12 l_h20" url="./discount/discount" hover-class="none" >查看更多商品 ></navigator>
+      </view>
+
+      <view class='product-body'>
+        <block wx:for="{{discountProduct}}" wx:key="id" wx:for-item="discountProduct" wx:for-index="index">
+          <view class='product-item' bindtap="navigateToProduct" data-id="{{discountProduct.id}}">
+            <view class='product-pic'>
+              <image src="{{discountProduct.picture}}" mode="aspectFill"></image>
+            </view>
+            <view class='product-desc'>
+              <view class='product-title'>{{discountProduct.name}}</view>
+              <text class='product-price'>¥ {{discountProduct.price}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  
+    <block>
+    <view class='productlist'>
+      <view class='product-head'>
+        <text>团购秒杀</text>
+        <navigator class="fl_r c9 font_12 l_h20" url="./groupbuy/groupbuy" hover-class="none" >查看更多商品 ></navigator>
+      </view>
+
+      <view class='product-body'>
+        <block wx:for="{{groupbuyProduct}}" wx:key="id" wx:for-item="groupbuyProduct" wx:for-index="index">
+          <view class='product-item' bindtap="navigateToProduct" data-id="{{groupbuyProduct.id}}">
+            <view class='product-pic'>
+              <image src="{{groupbuyProduct.picture}}" mode="aspectFill"></image>
+            </view>
+            <view class='product-desc'>
+              <view class='product-title'>{{groupbuyProduct.name}}</view>
+              <text class='product-price'>¥ {{groupbuyProduct.price}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  
+<block>
+<view class='productlist1' bindtap="showWX">
+  <view class="qbdd">
+
+ 			 <button type="default" class="button1 gray">北京智联软件提供技术支持>>></button>
+    </view>
+    </view>
+  </block>
 </view>
-

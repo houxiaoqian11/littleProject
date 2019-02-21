@@ -1,40 +1,16 @@
 // pages/addr/edit/edit.js
+var app = getApp();
 Page({
   data: {
-    addr:{
-
-    },
-    provinces: [
-      "江西",
-      "湖南"
-    ],
-    citys: [
-      "赣州",
-      "长沙"
-    ],
-    areas: [
-      "宁都县",
-      "开福区"
-    ],
-    streets: [
-      "清塘镇",
-      "芙蓉北路",
-      "湘江中路"
-    ],
-    street_idx: 0,
-    province_idx: 0,
-    city_idx: 0,
-    area_idx: 0
+    addr:{}
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    //console.log(options)
     if (options.id) {
       this.setData({
         "addr.id": options.id
       })
     }
-
     var id = this.data.addr.id;
     if (id) {
       var that = this;
@@ -44,13 +20,13 @@ Page({
         duration: 900000
       })
       wx.request({
-        url: 'http://123.207.30.64:8080/Wxmini/addr_get.do?id=' + id,
+        url: 'https://www.zrshxq.club/peakshop/address/get.do?id=' + id,
         // data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header
         success: function (res) {
           // success
-          console.log(res.data);
+          console.log(res.data.userId);
           var addr = res.data;
           that.setData({
             addr: addr
@@ -71,46 +47,6 @@ Page({
         complete: function () {
           // complete
           wx.hideToast();
-          var addr = that.data.addr;
-          var provinces = that.data.provinces;
-          var areas = that.data.areas;
-          var citys = that.data.citys;
-          var streets = that.data.streets;
-          var province_idx = 0;
-          var city_idx = 0;
-          var area_idx = 0;
-          var street_idx = 0;
-          //记得移走到success里面
-          for (var i = 0; i < provinces.length; i++) {
-            if (provinces[i] == addr.province) {
-              province_idx = i;
-              break;
-            }
-          }
-          for (var i = 0; i < citys.length; i++) {
-            if (citys[i] == addr.city) {
-              city_idx = i;
-              break;
-            }
-          }
-          for (var i = 0; i < areas.length; i++) {
-            if (areas[i] == addr.area) {
-              area_idx = i;
-              break;
-            }
-          }
-          for (var i = 0; i < streets.length; i++) {
-            if (streets[i] == addr.street) {
-              street_idx = i;
-              break;
-            }
-          }
-          that.setData({
-            "province_idx": province_idx,
-            "city_idx": city_idx,
-            "area_idx": area_idx,
-            "street_idx": street_idx,
-          })
         }
       })
     }else{
@@ -124,6 +60,10 @@ Page({
   },
   onShow: function () {
     // 页面显示
+   	var userId = app.d.userId;
+     this.setData({
+        "addr.userId": userId
+      })
   },
   onHide: function () {
     // 页面隐藏
@@ -131,56 +71,16 @@ Page({
   onUnload: function () {
     // 页面关闭
   },
-  provinceChange: function (e) {
-    var idx = e.detail.value;
-    console.log(idx);
-    this.setData({
-      province_idx: idx
-    })
-  },
-  cityChange: function (e) {
-    var idx = e.detail.value;
-    console.log(idx);
-    this.setData({
-      city_idx: idx
-    })
-  },
-  areaChange: function (e) {
-    var idx = e.detail.value;
-    console.log(idx);
-    this.setData({
-      area_idx: idx
-    })
-  },
-  streetChange: function (e) {
-    var idx = e.detail.value;
-    console.log(idx);
-    this.setData({
-      street_idx: idx
-    })
-  },
   saveAddr: function (e) {
-    console.log(e)
-    var provinces = this.data.provinces;
-    var areas = this.data.areas;
-    var citys = this.data.citys;
-    var streets = this.data.streets;
-
     var addr = e.detail.value;
-    addr.province = provinces[addr.province];
-    addr.area = areas[addr.area];
-    addr.city = citys[addr.city];
-    addr.street = streets[addr.street];
-    var id = this.data.addr.id;
-    addr.id=id;
-    console.log(addr)
     wx.showToast({
       title: "Loading...",
       icon: "loading",
       duration: 900000
     })
+    console.log("userid="+this.data.addr.userId);
     wx.request({
-      url: 'http://123.207.30.64:8080/Wxmini/addr_saveOrUpdate.do',
+      url: 'https://www.zrshxq.club/peakshop/address/saveOrUpdate.do',
       data: addr,
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -226,7 +126,7 @@ Page({
       duration: 900000
     })
     wx.request({
-      url: 'http://123.207.30.64:8080/Wxmini/addr_del.do?id=' + id,
+      url: 'https://www.zrshxq.club/peakshop/address/del.do?id=' + id,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

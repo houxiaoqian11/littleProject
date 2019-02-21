@@ -24,14 +24,14 @@
 	height: 150rpx;
 }
 
-.goodlist {
+.productlist {
 	clear: both;
 	margin: 00rpx 10px;
 	padding-bottom: 40rpx;
 	font-size: 14px;
 }
 
-.good-head {
+.product-head {
 	padding: 10rpx 0px;
 	padding-left: 10rpx;
 	font-size: 20px;
@@ -49,26 +49,100 @@
 	background: url(../../image/typemore.png) no-repeat 45rpx center;
 }
 
-.good-body {
+.product-body {
 	padding: 10rpx 0px;
+	border-bottom: 1px solid #eee
 }
 
-.good-item{
+.product-item{
 	padding: 10rpx 10rpx;
 	width: 335rpx;
 	float: left;
 }
 
-.good-pic image{
+.product-pic image{
 	width: 335rpx;
 	height: 300rpx;
 }
 
-.good-title{
+.product-title{
 	padding: 10rpx 0px;
 	font-size: 12px;
 }
 
-.good-price{
+.product-price{
 	color: orangered;
+}
+
+.qbdd{
+  width: 100%;
+  height: 40rpx;
+  font-size: 12px;
+  color: #666;
+  border-top: 1px solid #ccc;
+}
+
+.image1{
+	position: absolute;
+  margin-top:12px; 
+  margin-left:105px;
+  margin-bottom:10px;
+}
+
+.vedio{
+  width: 99%;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.productlist1 {
+	clear: both;
+	font-size: 14px;
+}
+
+.button{
+width: 750rpx;
+line-height: 38px;
+text-align: center;
+font-weight: bold;
+text-shadow:1px 1px 1px #333;
+border-radius: 5px;
+margin:0 20px 20px 0;
+position: relative;
+overflow: hidden;
+}
+
+.button1{
+width: 750rpx;
+line-height: 38px;
+text-align: center;
+color: #fff;
+border-radius: 5px;
+margin:0 20px 0 0;
+position: relative;
+overflow: hidden;
+font-size: 12px;
+}
+
+.button1.gray{
+color: #8c96a0;
+text-shadow:1px 1px 1px #fff;
+border:1px solid #dce1e6;
+box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: linear-gradient(top,#f2f3f7,#e4e8ec);
+}
+
+.button:nth-child(6n){
+margin-right: 0;
+}
+.button.gray{
+color: #666666;
+text-shadow:1px 1px 1px #fff;
+border:1px solid #dce1e6;
+box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: linear-gradient(top,#f2f3f7,#e4e8ec);
 }

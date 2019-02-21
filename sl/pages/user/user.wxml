@@ -1,24 +1,49 @@
 <!--pages/user/user.wxml-->
-<view id="userhead" bindlongtap="showUserTip" bindtap="showUserTip">
-  <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-</view>
-<view id="other">
-  <view id='addr' bindtap="navigateToAddr">
-    我的地址
-  </view>
+<view class="page">
+    <view class="userinfo">
+			<image class="userinfo-avatar fl_l" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+			<text class="fl_l">{{userInfo.nickName}}</text></view>
+    <!--订单详情-->
+    <view class="qbdd mt10">
+    <span class="font_14 c3">全部订单</span>
+    <navigator class="fl_r c9 font_12 l_h20" url="../user/dingdan?currentTab=0&otype=0" hover-class="none" >查看全部订单 ></navigator>
+    </view>
+    <view class="sc df tc bte ">
+    <navigator class="df_1" url="../user/dingdan?currentTab=0&otype=0" hover-class="none" >
+        <view>
+        <image src="/image/dfk.png"></image> 
+       </view>
+        <text class="font_12">待付款<text style="color:red">({{orderInfo.noPayNum}})</text></text>
+      </navigator>
 
-  <view id='order'>
-    <view class='order-item' style="background-image: url(../../image/order.png); background-position:20rpx center" bindtap="navigateToOrder">
-      全部订单<text class='more'></text> 
+    <navigator class="df_1" url="../user/dingdan?currentTab=1&otype=1" hover-class="none" >
+      <view><image src="/image/dfh.png"></image></view>
+        <text class="font_12">待发货<text style="color:red">({{orderInfo.noSendNum}})</text></text>  
+      </navigator> 
+
+      <navigator class="df_1" url="../user/dingdan?currentTab=2&otype=2" hover-class="none" >
+          <view><image src="/image/dpl.png"></image></view>
+          <text class="font_12">待收货<text style="color:red">({{orderInfo.noRecNum}})</text></text>
+      </navigator>
+
+    <navigator class="df_1" url="../user/dingdan?currentTab=3&otype=3" hover-class="none" >
+          <view><image src="/image/dsh.png"></image></view>
+          <text  class="font_12">已完成<text style="color:red">({{orderInfo.finishNum}})</text></text>
+      </navigator>
+
     </view>
-    <view class='order-item' style="background-image: url(../../image/pay.png); background-position:20rpx center" bindtap="navigateToOrder_pay">
-      待付款<text class='more'></text> 
+<view class="qbdd mt10">
+ <navigator url="../addr/addr">
+    <span class="font_14 c3">地址管理</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+    </navigator>
     </view>
-    <view class='order-item' style="background-image: url(../../image/need.png); background-position:20rpx center" bindtap="navigateToOrder_get">
-      待收货<text class='more'></text> 
+  <navigator url="../user/contact" hover-class="none" >
+<view class="qbdd mt110">
+    <span class="font_14 c3">联系商家</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
     </view>
-  </view>
+ </navigator>
 </view>
+
+

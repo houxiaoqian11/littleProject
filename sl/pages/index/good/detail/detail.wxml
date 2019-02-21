@@ -1,49 +1,82 @@
-<!--pages/index/good/detail/detail.wxml-->
+<!--pages/index/product/detail/detail.wxml-->
 <view style="background:#eee">
-    <scroll-view scroll-y style="height:1130rpx">
-        <swiper id='pics' indicator-dots >
-        <block wx:for="{{good.pics}}">
-            <swiper-item>
-                <image src="{{item}}" mode="aspectFill"  class='pic'></image>
-            </swiper-item>
-        </block>
+  <scroll-view scroll-y>
+    <swiper id='pics' indicator-dots>
+
+
+    	 			 <swiper-item>
+          	  <image src="{{product.picture}}" mode="aspectFill" id="image" bindtap="navigateToHot"></image>
+    </swiper-item>
+
     </swiper>
 
     <view id='desc'>
-        <view class='title'>
-            {{good.title}}
-        </view>
-        <view class='price'>
-           $ {{good.tcprices[good.tc]}}
-        </view>
-        <view class='prevprice'>
-            价格: <text>{{good.prevprice}}</text> 
-        </view>
-        
+      <view class='title'>
+        {{product.name}}
+      </view>
+      <view><span class="jiage">¥：{{product.price}}</span> <span class="store">库存：{{store}}</span> </view>
+      <view class='prevprice'>
+        原价: <text>{{product.prevprice}}</text>
+      </view>
     </view>
 
-    <view id='tc'>
-        <picker bindchange="changeTc" mode="selector" range="{{good.tcs}}" value="{{good.tc}}">
-           套餐选择: <text>{{good.tcs[good.tc]}}</text>
-        </picker>
+    <view id='colo'>
+      <picker bindchange="changeColo" mode="selector" range="{{product.cols}}">
+        颜色选择: <text>{{product.cols[colorIndex]}}</text>
+      </picker>
+    </view>
+
+    <view id='siz'>
+      <picker bindchange="changeSize" mode="selector" range="{{product.sizs}}">
+        尺码选择: <text>{{product.sizs[sizeIndex]}}</text>
+      </picker>
     </view>
 
     <view id='twxq'>
-        <text class='head'>图文详情</text>
-        <block wx:for="{{good.xqs}}">
-            <block wx:if="{{item.type==0}}">
-                <image src="{{item.content}}" class='pic' mode="aspectFill"></image>
-            </block>
-            <block wx:if="{{item.type==1}}">
-                <text class='text'>{{item.content}}</text>
-            </block>
-        </block>
+      <text class='head'>图文详情</text>
+      <block wx:for="{{product.details}}" wx:key="id">
+        <image src="{{item.picture}}" class='pic' mode="aspectFill"></image>
+      </block>
     </view>
-    </scroll-view>
+  </scroll-view>
 
-    <view id='foot'>
-        <text class='cart' bindtap="addToCart">加入购物车</text>
-        <text class='buy' bindtap="buyNow">立即购买</text>
+  <!--弹窗-->
+  <view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+    <view class="close_icon" bindtap="setModalStatus" data-status="0">×</view>
+    <view class="drawer_attr_content">
+      <view class="text_center">
+        <image class="drawer_image" src="{{product.picture}}"></image>
+        <view class="mingcheng">
+          <view>{{product.name}}</view>
+          <view style="font-size:29rpx;color:red">¥ {{product.price}}</view>
+          <view style="font-size:26rpx;color:#ccc">库存：{{store}}</view>
+        </view>
+      </view>
+      <view class="shu">
+        <text class="cun">购买数量</text>
+        <view class="dian">
+          <view class="stepper">
+
+            <!-- 减号 -->
+            <text class="{{minusStatuses[index]}}" data-alpha-beta="0" bindtap="changeNum">-</text>
+            <!-- 数值 -->
+            <view class="nownum">{{buynum}}</view>
+            <!-- 加号 -->
+            <text class="normal" data-alpha-beta="1" bindtap="changeNum">+</text>
+          </view>
+        </view>
+      </view>
+      <view class="footc" bindtap="addToCart" data-type="buynow" data-status="1">
+        立即购买
+      </view>
     </view>
+  </view>
+
+
+  <view id='foot'>
+    <text class='cart' bindtap="addToCart" data-type="addcart">加入购物车</text>
+    <text class='buy' bindtap="setModalStatus" data-status="1">立即购买</text>
+  </view>
 
 </view>

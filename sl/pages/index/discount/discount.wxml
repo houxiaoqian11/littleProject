@@ -1,0 +1,26 @@
+<!--pages/index/product/product.wxml-->
+<view >
+    <view id='search'>
+        <form bindsubmit="searchProduct">
+            <input name='keyword' placeholder="请输入搜索关键字" type="text" maxlength="50" placeholder-style="color:red" />
+            <button form-type="submit" size="mini" >搜索</button>
+        </form>
+    </view>
+    
+
+    <view id='productlist'>
+        <view class='product-body'>
+            <block wx:for="{{productlist}}" wx:key="{{orderBy}}" wx:for-item="product">
+                <view class='product-item' bindtap="navigateToProduct" data-id="{{product.id}}">
+                    <view class='product-pic'>
+                        <image src="{{product.picture}}" mode="aspectFill"></image>
+                    </view>
+                    <view class='product-desc'>
+                        <view class='product-title ovh1'>{{product.name}}</view>
+                        <text class='product-price'>$ {{product.price}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+        </view>
+</view>

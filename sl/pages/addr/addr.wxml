@@ -3,16 +3,17 @@
   <!--pages/addr/addr.wxml-->
   <scroll-view id='addrlist' scroll-y>
     <block wx:for="{{addrlist}}" wx:key="addr">
-      <view class='list-item' wx:if="{{item.isDefault}}">
+		 
+	<view class='list-item' wx:if="{{item.isDefault}}">
+	<navigator class="df_1" url="../order/pay" hover-class="none" >
         <view class='item-head'>
           <text>{{item.name}}</text>
-          <text class='right'>18670321728</text>
+          <text class='right'>{{item.phone}}</text>
         </view>
         <view class='item-desc'>
-          <text>{{item.province}}省{{item.city}}市{{item.area}}</text>
-          <text>{{item.street}}</text>
-          <text>{{item.desc}}</text>
+          <text>地址：{{item.address}}</text>
         </view>
+		 </navigator>
         <view class='item-edit'>
           <view class='left chk-active'>
             <switch type="checkbox" disabled checked />
@@ -29,12 +30,10 @@
       <view class='list-item' wx:if="{{item.isDefault==false&&item.isLast==false}}">
         <view class='item-head'>
           <text>{{item.name}}</text>
-          <text class='right'>18670321728</text>
+          <text class='right'>{{item.phone}}</text>
         </view>
         <view class='item-desc'>
-          <text>{{item.province}}省{{item.city}}市{{item.area}}</text>
-          <text>{{item.street}}</text>
-          <text>{{item.desc}}</text>
+          <text>地址：{{item.address}}</text>
         </view>
         <view class='item-edit'>
           <view class='left'>
@@ -52,12 +51,10 @@
       <view class='list-item' wx:if="{{item.isDefault==false&&item.isLast}}" style='margin-bottom:100rpx;'>
         <view class='item-head'>
           <text>{{item.name}}</text>
-          <text class='right'>18670321728</text>
+          <text class='right'>{{item.phone}}</text>
         </view>
         <view class='item-desc'>
-          <text>{{item.province}}省{{item.city}}市{{item.area}}</text>
-          <text>{{item.street}}</text>
-          <text>{{item.desc}}</text>
+          <text>地址：{{item.address}}</text>
         </view>
         <view class='item-edit'>
           <view class='left'>

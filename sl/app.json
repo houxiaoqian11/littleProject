@@ -1,18 +1,25 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/video",
     "pages/index/good/detail/detail",
     "pages/index/good/good",
+    "pages/index/hot/hot",
+    "pages/index/discount/discount",
+    "pages/index/new/new",
     "pages/cart/cart",
-    "pages/user/order/order",
-    "pages/user/order/detail/detail",
+    "pages/order/detail",
     "pages/addr/edit/edit",
     "pages/user/user",
-    "pages/addr/addr"
+    "pages/user/contact",
+    "pages/addr/addr",
+	"pages/addr/payaddr",
+    "pages/order/pay",
+    "pages/user/dingdan"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "猴哥数码城",
+    "navigationBarTitleText": "PEAK专卖店",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

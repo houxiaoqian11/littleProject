@@ -2,6 +2,8 @@
 
   <!--pages/addr/edit/edit.wxml-->
   <form bindsubmit="saveAddr">
+  <input type="text" maxlength="20" name="userId" value="{{addr.userId}}" style="display:none"/>
+  <input type="text" maxlength="20" name="id" value="{{addr.id}}" style="display:none"/>
     <view id='edit'>
       <view class='edit-item'>
         <text>收货人</text>
@@ -14,35 +16,7 @@
       </view>
       <view class='hr'></view>
       <view class='edit-item'>
-        <text>所在地区</text>
-        <picker mode="selector" name='area' value='{{area_idx}}' range="{{areas}}" bindchange="areaChange">
-          <view class='picker_last'>
-            {{areas[area_idx]}}
-          </view>
-        </picker>
-        <picker mode="selector" name='city' value='{{city_idx}}' range="{{citys}}" bindchange="cityChange">
-          <view>
-            {{citys[city_idx]}}
-          </view>
-        </picker>
-        <picker mode="selector" name='province' value='{{province_idx}}' range="{{provinces}}" bindchange="provinceChange">
-          <view>
-            {{provinces[province_idx]}}
-          </view>
-        </picker>
-      </view>
-      <view class='hr'></view>
-      <view class='edit-item'>
-        <text>街道</text>
-        <picker mode="selector" name='street' value='{{street_idx}}' range="{{streets}}" bindchange="streetChange">
-          <view class='picker_last'>
-            {{streets[street_idx]}}
-          </view>
-        </picker>
-      </view>
-      <view class='hr'></view>
-      <view class='edit-item'>
-        <textarea name="desc" maxlength="500" placeholder="请输入详细地址" style="height:200rpx;" value="{{addr.desc}}" />
+        <textarea name="address" maxlength="500" placeholder="请输入详细地址" style="height:200rpx;" value="{{addr.address}}" />
       </view>
     </view>
     <view id='default'>

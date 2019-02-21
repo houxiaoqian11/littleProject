@@ -1,0 +1,1 @@
+<video src="{{path}}" binderror="videoErrorCallback" style="width:750rpx;"></video>

@@ -3,281 +3,45 @@
 var app = getApp()
 Page({
   data: {
-    typelist: [
-      {
-        pic: "notebook",
-        id: 1,
-        name: "笔记本",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "ts",
-        id: 2,
-        name: "台式机",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "ws",
-        id: 3,
-        name: "电脑外设",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "sjpj",
-        id: 4,
-        name: "手机配件",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "sj",
-        id: 5,
-        name: "智能手机",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "pcpj",
-        id: 6,
-        name: "pc配件",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "shuma",
-        id: 7,
-        name: "数码",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-      {
-        pic: "znpd",
-        id: 8,
-        name: "智能穿戴",
-        goods: [
-          {
-            id: 1,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 2,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 3,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          },
-          {
-            id: 4,
-            title: "雷柏v500 RGB机械键盘",
-            pic: "../../image/03.jpg",
-            price: 169,
-          }
-        ]
-      },
-    ]
+    typeList: [],
+    newProduct:[],
+    hotProduct:[],
+    discountProduct:[]
 
+  },
+    onShow: function () {
+    // 页面显示
+      console.log("从服务端获取类型");
+    var that = this;
+    wx.request({
+      url: 'https://www.hxqzsr.club/peakshop/index/getlist.do',
+      // data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function (res) {
+        // success
+        that.setData({
+          typeList: res.data.typeList,
+          newProduct: res.data.newProduct,
+          hotProduct: res.data.hotProduct,
+          discountProduct: res.data.discountProduct
+        })
+      },
+      fail: function () {
+        // fail
+        setTimeout(function () {
+          wx.showToast({
+            title: "加载失败",
+            duration: 1500
+          })
+        }, 100)
+      },
+      complete: function () {
+        // complete
+        wx.hideToast();
+      }
+
+    })
   },
   onLoad: function () {
     console.log('onLoad')
@@ -296,11 +60,21 @@ Page({
       url: './good/good?typeId=' + id
     })
   },
-  navigateToGood: function (e) {
+  navigateToProduct: function (e) {
     var id = e.currentTarget.dataset.id;
-    console.log("navigateToGood--> ID:", id)
+    console.log("navigateToProduct--> ID:", id)
     wx.navigateTo({
       url: './good/detail/detail?id=' + id
     })
   },
+  showWX: function (e) {
+  	wx.showModal({
+         title: "微信: 133 0123 5050",
+         duration: 3000
+     })
+  },
+  goto_counter:function(){
+      wx.navigateTo({url:"./video"});
+  },
+
 })
