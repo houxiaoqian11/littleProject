@@ -1,0 +1,75 @@
+package redisDemo;
+
+import com.alibaba.fastjson.JSON;
+
+public class MerchantInfo {
+	// 商户号
+	private String merchantCode;
+	// 单日限额
+	private String dailyLimitAmount;
+	// 单笔限额
+	private String singleLimitAmount;
+	// 日发生额
+	private String dealAmount;
+
+	public MerchantInfo() {
+
+	}
+
+	
+	public MerchantInfo(String merchantCode, String dailyLimitAmount, String singleLimitAmount, String dealAmount) {
+		super();
+		this.merchantCode = merchantCode;
+		this.dailyLimitAmount = dailyLimitAmount;
+		this.singleLimitAmount = singleLimitAmount;
+		this.dealAmount = dealAmount;
+	}
+
+	public String getDailyLimitAmount() {
+		return dailyLimitAmount;
+	}
+
+	public void setDailyLimitAmount(String dailyLimitAmount) {
+		this.dailyLimitAmount = dailyLimitAmount;
+	}
+
+	public String getSingleLimitAmount() {
+		return singleLimitAmount;
+	}
+
+	public void setSingleLimitAmount(String singleLimitAmount) {
+		this.singleLimitAmount = singleLimitAmount;
+	}
+
+	public String getDealAmount() {
+		return dealAmount;
+	}
+
+	public void setDealAmount(String dealAmount) {
+		this.dealAmount = dealAmount;
+	}
+
+
+	public String getMerchantCode() {
+		return merchantCode;
+	}
+
+	public void setMerchantCode(String merchantCode) {
+		this.merchantCode = merchantCode;
+	}
+	
+	public String getKey() {
+		return key;
+	}
+
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+
+	@Override
+	public String toString() {
+		return JSON.toJSON(this).toString();
+	}
+}

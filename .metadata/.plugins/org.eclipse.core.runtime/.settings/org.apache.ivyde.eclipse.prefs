@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+ivuUserDir=D\:\\develop\\ivy\\userdir
+ivy_conf_path=file\:/D\:/develop/ivy/userdir/ivysettings.xml
+propertyFiles=D\:\\develop\\ivy\\userdir\\ivysettings.properties
+retrievedClasspath.pattern=lib/[type]s/[artifact]-[revision].[ext]
+retrievedClasspath.types=*

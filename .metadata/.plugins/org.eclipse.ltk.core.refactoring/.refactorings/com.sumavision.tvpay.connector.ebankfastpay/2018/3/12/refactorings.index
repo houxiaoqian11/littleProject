@@ -1,0 +1,7 @@
+1521449754479	Rename package 'com.sumavision.tvpay.connector.handler.xmms.fastpay.bank'
+1521449771287	Rename package 'com.sumavision.tvpay.connector.handler.xmms.fastpay.plateform'
+1521595927495	Rename package 'com.sumavision.tvpay.connector.handler.xmms.fastpay.plateform'
+1521596016557	Rename resource 'xmmsfastpay.properties'
+1521615425135	Extract local variable 'requestForm'
+1521615507571	Copy compilation unit
+1521618807606	Copy files

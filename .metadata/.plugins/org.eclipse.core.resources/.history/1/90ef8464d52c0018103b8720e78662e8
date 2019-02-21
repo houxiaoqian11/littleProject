@@ -1,0 +1,79 @@
+package com.sumavision.tvpay.connector.handler.ebank.fastpay.plateform;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sumavision.tvpay.connector.handler.ebank.fastpay.plateform.QueryFastPayResultHandler;
+import com.sumavision.tvpay.connector.util.Constant;
+import com.sumavision.tvpay.spring.resources.ReloadablePlaceHolderResourceBundleMessageSource;
+
+public class GetFastTradeValidateCodeHandleTest {
+	ApplicationContext ac = new ClassPathXmlApplicationContext("applicationSpring.xml");
+	ReloadablePlaceHolderResourceBundleMessageSource ppc ;
+	GetFastTradeValidateCodeHandler hand;
+	@Before
+	public void setUp(){
+		hand = new GetFastTradeValidateCodeHandler();
+		ppc = (ReloadablePlaceHolderResourceBundleMessageSource) ac.getBean("propertyConfigurer");
+		hand.setPpc(ppc);
+	}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Test
+	public void runIt(){
+		Map params = new HashMap();
+		Map bankInfoParam = new HashMap();
+		
+		String qq = ppc.getMessage("jine");
+		String phone=ppc.getMessage("phone");
+		String cardno= ppc.getMessage("cardno");
+		String cardtype= ppc.getMessage("cardtype");
+		String idno= ppc.getMessage("idno");
+		String idtype = ppc.getMessage("idtype");
+		String name= ppc.getMessage("name");
+		String cvvcode= ppc.getMessage("cvvcode");
+		String validate= ppc.getMessage("validate");
+		String tradeid= ppc.getMessage("tradeid");
+		String orgbankid= ppc.getMessage("orgbankid");
+		String paytradeid= ppc.getMessage("paytradeid");
+		
+		params.put(Constant.SUM, new BigDecimal(qq));
+		params.put(Constant.TRADE_ID, tradeid);
+
+		bankInfoParam.put(Constant.BANK_ACCOUNT_NAME, name); // 买方姓名
+		bankInfoParam.put(Constant.ID_TYPE, idtype); // 证件类型
+		bankInfoParam.put(Constant.ID_NUMBER, idno); // 证件号码
+		bankInfoParam.put(Constant.BANK_ACCOUNT, cardno); // 银行卡号
+		bankInfoParam.put(Constant.BANK_ACCOUNT_TYPE, cardtype); // 银行卡类型
+		bankInfoParam.put(Constant.CVN_CODE, cvvcode); // cvn2
+		bankInfoParam.put(Constant.VALID_DATE, validate); // 有效期
+
+		bankInfoParam.put(Constant.SAVEPCIFLAG, "0"); // 保存鉴权信息
+		bankInfoParam.put(Constant.PHONE_NO, phone); //手机号
+		
+		params.put(Constant.FUND, new BigDecimal(qq));
+		params.put(Constant.ORIGIN_BANK_TRADE_ID, orgbankid);
+		params.put(Constant.ID_TYPE, "0"); // 证件类型 
+		params.put(Constant.ID_NUMBER, idno); // 证件号码
+		params.put(Constant.BANK_ACCOUNT, cardno); // 银行卡号
+		params.put(Constant.MOBILE_PHONE, phone); //手机号
+		params.put(Constant.PAY_TRADE_ID, paytradeid);
+		
+		params.put(Constant.BANK_ACCOUNT_NAME, name); // 买方姓名
+		params.put(Constant.BANK_ACCOUNT_TYPE, cardtype); // 银行卡类型
+		params.put(Constant.CVN_CODE, cvvcode); // cvn2
+		params.put(Constant.VALID_DATE, validate); // 有效期
+		
+		params.put(Constant.START_TIME,new Date());
+		
+		params.put("PARAMS", bankInfoParam);
+		params.put("BANK_CODE", "bill99");
+		hand.process(params);
+	}
+}

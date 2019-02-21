@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- 交易系统远程服务 -->
+	<bean id="tradeTransactionServiceList"
+		class="com.proemion.spring.clustering.algo.manual.ManualSelectModeServiceList">
+		<!-- separate different URIs with spaces -->
+		<property name="serviceURIs" value="${front.springremote.urls}">
+		</property>
+	</bean>
+	<bean id="tradeTransactionFailureHandler"
+		class="com.proemion.spring.clustering.fail.ParanoidFailureHandler">
+		<property name="serviceList" ref="tradeTransactionServiceList"></property>
+		<property name="protocolHandler" ref="tradeTransactionHttpInvokerHandler"></property>
+		<property name="maxRetryCount" value="${spring.remote.maxRetryCount}"></property>
+		<property name="reactivationTime" value="${spring.remote.reactivationTime}"></property>
+		<property name="testTimeout" value="${spring.remote.testTimeout}"></property>
+	</bean>
+	<bean id="tradeTransactionClusteringConfiguration" class="com.proemion.spring.clustering.ClusteringConfiguration">
+		<property name="codebaseUrl" value="null"></property>
+		<property name="serviceInterface" value="${front.service.businessInterface}"></property>
+	</bean>
+	<bean id="tradeTransactionHttpInvokerHandler"
+		class="com.proemion.spring.clustering.protocol.http.HttpInvokerHandler">
+		<property name="defaultTimeout" value="${spring.remote.invokeTimeout}" />
+		<property name="configuration" ref="tradeTransactionClusteringConfiguration" />
+	</bean>
+	<bean id="springremoteclient" class="com.proemion.spring.clustering.RemoteClusteringProxyFactoryBean">
+		<property name="serviceList" ref="tradeTransactionServiceList" />
+		<property name="failureHandler" ref ="tradeTransactionFailureHandler" />
+		<property name="protocolHandler" ref="tradeTransactionHttpInvokerHandler"/>
+		<property name="configuration" ref="tradeTransactionClusteringConfiguration" />
+	</bean>
+	<bean id="TransactionSessionBean" class="com.sumapay.dispatch.proxy.TradeProxyFactoryBean">
+		<property name="filterTradeCodes" value="${spring.amqp.trade.code}"></property>
+		<property name="remoteService" ref="springremoteclient"></property>
+		<property name="filterRemoteService" ref="springamqpclient"></property>
+	</bean>
+</beans>

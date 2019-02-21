@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="propertyConfigurer"
+		class="com.sumavision.tvpay.spring.resources.ReloadablePlaceHolderResourceBundleMessageSource">
+		<property name="locations">
+			<list>
+				<value>file:///sumapay/config/sumapay-config.properties</value>
+				<value>file:///sumapay/bankConnector/ucfpay/fastpay/ucfpay_fastpay.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- connector center -->
+	<bean id="bankConnector" class="com.sumavision.tvpay.connector.dispatch.BankConnector"
+		destroy-method="unRegist">
+		<property name="bankCode" value="ucfpayfastpay"></property>
+		<property name="bankName" value="中国银联"></property>
+		<property name="connectorId" value="${connector.ucfpayfastpay.name}"></property>
+		<property name="name" value="${connector.ucfpayfastpay.name}"></property>
+		<property name="connectorHost" value="${connector.ucfpayfastpay.connectorHost}"></property>
+		<property name="connectorPort" value="${connector.ucfpayfastpay.connectorPort}"></property>
+		<property name="serviceName" value="ucfpayfastpay"></property>
+		<property name="connectorManagerUrls" value="${connector.ucfpayfastpay.connectorManagerUrls}"></property>
+		<!-- <property name="handlerMonitor" ref="handlerMonitor"></property> -->
+	</bean>
+	
+	<bean id="bankRecord2MapConvertInterceptor" class="com.sumapay.mapobject.convert.BankRecord2MapConvertInterceptor">
+	</bean>
+	<bean id="bankConnectorProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces">
+        	<value>com.sumavision.tvpay.connector.ClusterConnector</value>
+        </property>
+        <property name="target" ref="bankConnector" />
+        <property name="interceptorNames">
+            <list>
+                <value>bankRecord2MapConvertInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    
+   	
+	 <!-- redis config start -->
+    <!-- redis连接池 -->  
+    <bean id="jedisConfig" class="redis.clients.jedis.JedisPoolConfig">  
+        <property name="maxTotal" value="${redis.maxActive}"></property>  
+        <property name="maxIdle" value="${redis.maxIdle}"></property>  
+        <property name="maxWaitMillis" value="${redis.maxWait}"></property>  
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"></property>  
+    </bean>  
+    <!-- redis连接工厂 -->  
+    <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">  
+        <property name="hostName" value="${redis.host}"></property>  
+        <property name="port" value="${redis.port}"></property>  
+        <property name="password" value="${redis.password}"></property>  
+        <property name="poolConfig" ref="jedisConfig"></property>  
+    </bean>  
+    <!-- redis操作模板，这里采用尽量面向对象的模板 -->  
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">  
+        <property name="connectionFactory" ref="connectionFactory"/>  
+        <!--     如果不配置Serializer，那么存储的时候只能使用String，如果用对象类型存储，那么会提示错误 can't cast to String！！！-->  
+        <property name="keySerializer">  
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>  
+        </property>  
+        <property name="valueSerializer">  
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>  
+        </property>  
+        <!--开启事务-->  
+        <property name="enableTransactionSupport" value="true"/>  
+    </bean>
+    <!-- redis锁 -->
+<!--     <bean id="redisLock" class="com.sumavision.tvpay.connector.util.RedisLock">
+    	<property name="redisTemplate" ref="redisTemplate"></property>
+    	<property name="lockKey" value="${redis.lock}"></property>  
+    </bean> -->
+
+    
+</beans>

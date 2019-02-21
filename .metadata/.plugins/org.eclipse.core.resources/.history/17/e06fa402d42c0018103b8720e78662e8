@@ -1,0 +1,148 @@
+package com.sumavision.tvpay.connector.util;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.StringRequestEntity;
+import org.apache.commons.httpclient.params.HttpMethodParams;
+import org.apache.commons.httpclient.protocol.Protocol;
+
+
+public class HttpUtil {
+	/**
+	 * 
+	 * @param url 发送地址
+	 * @param myMap 发送参数
+	 * @param readTimeout 读取超时时间 毫秒
+	 * @param connTimeOut 链接超时时间 毫秒
+	 * @param ecodeding 读取银行返回结果时的编码
+	 * @return
+	 * @throws Exception 
+	 */
+	@SuppressWarnings("rawtypes")
+	public static String sendHttpWithParam(String url, HashMap myMap,int readTimeout, int connTimeOut, String ecoding) throws Exception {
+		String respStr = null;
+		HttpClient httpClient = new HttpClient();
+		PostMethod postmethod = new PostMethod(url);
+		// 链接超时
+		httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(connTimeOut);
+		// 读取超时
+		httpClient.getHttpConnectionManager().getParams().setSoTimeout(readTimeout);
+		//设置编码
+		httpClient.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "GBK");
+		try{
+			if(myMap!=null){
+				for (Iterator iter = myMap.entrySet().iterator(); iter.hasNext();) {
+					Map.Entry element = (Map.Entry) iter.next();
+					Object strKey = element.getKey();
+					Object strObj = element.getValue();
+					postmethod.addParameter(strKey.toString(), strObj.toString());
+				}
+			}
+			int statusCode = httpClient.executeMethod(postmethod);
+			if (statusCode == HttpStatus.SC_OK) {
+				BufferedInputStream bis = new BufferedInputStream(postmethod.getResponseBodyAsStream());
+				byte[] bytes = new byte[1024];
+				ByteArrayOutputStream bos = new ByteArrayOutputStream();
+				int count = 0;
+				while ((count = bis.read(bytes)) != -1) {
+					bos.write(bytes, 0, count);
+				}
+				byte[] strByte = bos.toByteArray();
+				respStr = new String(strByte, 0, strByte.length, ecoding);
+			}
+		}catch(Exception e){
+			throw e;
+		}finally{
+			postmethod.releaseConnection();
+		}
+		return respStr;
+	}
+
+	/**
+	 * 
+	 * @param url 银行地址
+	 * @param param 请求参数
+	 * @param readTimeout 读取超时时间
+	 * @param connTimeOut 链接超时时间
+	 * @param readecoding	读取编码格式
+	 * @param sendecoding	发送编码格式
+	 * @param txtType	发送报文类型
+	 * @return
+	 * @throws Exception 
+	 */
+	public static String sendHttpWithoutParam(String url, String param,int readTimeout, int connTimeOut, String readecoding,String txtType, String sendecoding) throws Exception{
+		String respStr = null;
+		HttpClient httpClient = new HttpClient();
+		PostMethod postmethod = new PostMethod(url);
+		// 链接超时
+		httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(connTimeOut);
+		// 读取超时
+		httpClient.getHttpConnectionManager().getParams().setSoTimeout(readTimeout);
+		try{
+			postmethod.setRequestEntity(new StringRequestEntity(param, txtType,sendecoding));
+			int statusCode = httpClient.executeMethod(postmethod);
+			if (statusCode == HttpStatus.SC_OK) {
+				BufferedInputStream bis = new BufferedInputStream(postmethod.getResponseBodyAsStream());
+				byte[] bytes = new byte[1024];
+				ByteArrayOutputStream bos = new ByteArrayOutputStream();
+				int count = 0;
+				while ((count = bis.read(bytes)) != -1) {
+					bos.write(bytes, 0, count);
+				}
+				byte[] strByte = bos.toByteArray();
+				respStr = new String(strByte, 0, strByte.length, readecoding);
+			}
+		}catch(Exception e){
+			throw e;
+		}finally{
+			postmethod.releaseConnection();
+		}
+		return respStr;
+	}
+	/**
+	 * 
+	 * @param url
+	 * @param myMap 请求参数Map
+	 * @param readTimeout 
+	 * @param connTimeOut
+	 * @param ecoding
+	 * @return
+	 * @throws Exception
+	 */
+	public static int sendHttpWithoutResponse(String url, Map<String,String> myMap,int readTimeout, int connTimeOut, String ecoding) throws Exception{
+		int statusCode;
+		HttpClient httpClient = new HttpClient();
+		PostMethod postmethod = new PostMethod(url);
+		// 链接超时
+		httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(connTimeOut);
+		// 读取超时
+		httpClient.getHttpConnectionManager().getParams().setSoTimeout(readTimeout);
+		Protocol myhttps = new Protocol("https", new MySSLProtocolSocketFactory(), 443); 
+		Protocol.registerProtocol("https", myhttps); 
+		try{
+			if(myMap!=null){
+				for (Iterator<Entry<String, String>>  iter = myMap.entrySet().iterator(); iter.hasNext();) {
+					Entry<String, String> element = (Entry<String, String>) iter.next();
+					Object strKey = element.getKey();
+					Object strObj = element.getValue();
+					postmethod.addParameter(strKey.toString(), strObj.toString());
+				}
+			}
+			statusCode = httpClient.executeMethod(postmethod);
+		}catch(Exception e){
+			throw e;
+		}finally{
+			postmethod.releaseConnection();
+		}
+		return statusCode;
+		
+	}
+}

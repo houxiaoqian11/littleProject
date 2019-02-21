@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+						http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<!-- 远程接口调用切面 -->
+	<bean id="transferEntityMapAspect" class="com.sumavision.tvpay.entity.exchange.TransferEntityMapAspect"/>
+	<aop:config>
+		<aop:aspect ref="transferEntityMapAspect">
+			<!-- 截点，接口TransactionControllerRemote.process方法-->
+			<aop:pointcut id="remotePointcut" expression="execution(* com.sumavision.tvpay.front.transaction.TransactionControllerRemote.process(..)) "/>
+			
+			<!-- 前置通知事件 -->
+			<aop:before pointcut-ref="remotePointcut" method="clientTransferEntity2MapMethod" />
+			
+			<!-- 后置通知事件，用于获取返回结果并进行参数转换处理 -->
+			<aop:after-returning pointcut-ref="remotePointcut"  returning="retVal" method="clientTransferMap2EntityMehtod"/>
+		</aop:aspect>
+	</aop:config>
+</beans>

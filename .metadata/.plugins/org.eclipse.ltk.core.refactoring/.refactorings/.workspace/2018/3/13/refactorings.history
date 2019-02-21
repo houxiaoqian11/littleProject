@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/com.sumavision.tvpay.connector.ebankfastpay" element2="/com.sumavision.tvpay.connector.sft" element3="/com.sumavision.tvpay.connector.spdb_alipay" element4="/com.sumavision.tvpay.connector.ucfpay_fastpay" element5="/com.sumavision.tvpay.connector.xmmsfastpay" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1522403298149"/>
+</session>
