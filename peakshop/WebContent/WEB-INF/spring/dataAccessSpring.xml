@@ -1,0 +1,90 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+      http://www.springframework.org/schema/context  
+      http://www.springframework.org/schema/context/spring-context.xsd  
+      http://www.springframework.org/schema/mvc  
+      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+	
+	<bean id="addressInfoDAO" class="cn.guddqs.peakshop.dao.AddressInfoDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="tradeOrderDAO" class="cn.guddqs.peakshop.dao.TradeOrderDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="userInfoDAO" class="cn.guddqs.peakshop.dao.UserInfoDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="cartDAO" class="cn.guddqs.peakshop.dao.CartDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="typeDAO" class="cn.guddqs.peakshop.dao.TypeDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="productDAO" class="cn.guddqs.peakshop.dao.ProductDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="productDetailDAO" class="cn.guddqs.peakshop.dao.ProductDetailDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="colorDAO" class="cn.guddqs.peakshop.dao.ColorDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="sizeDAO" class="cn.guddqs.peakshop.dao.SizeDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="storeDAO" class="cn.guddqs.peakshop.dao.StoreDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="productColorDAO" class="cn.guddqs.peakshop.dao.ProductColorDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="productSizeDAO" class="cn.guddqs.peakshop.dao.ProductSizeDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="videoDAO" class="cn.guddqs.peakshop.dao.VideoDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="merchantInfoDAO" class="cn.guddqs.peakshop.dao.MerchantInfoDAOImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="productDAOEx" class="cn.guddqs.peakshop.dao.ex.ProductDAOExImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="typeDAOEx" class="cn.guddqs.peakshop.dao.ex.TypeDAOExImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="storeDAOEx" class="cn.guddqs.peakshop.dao.ex.StoreDAOExImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="cartDAOEx" class="cn.guddqs.peakshop.dao.ex.CartDAOExImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="userInfoDAOEx" class="cn.guddqs.peakshop.dao.ex.UserInfoDAOExImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+	
+	<bean id="tradeOrderDAOEx" class="cn.guddqs.peakshop.dao.ex.TradeOrderDAOExImpl"> 
+		<property name="sqlMapClient" ref="sqlMapClient" /> 
+	</bean>
+</beans>

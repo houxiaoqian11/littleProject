@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMapConfig
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="false" maxRequests="6000" maxSessions="5000"
+		maxTransactions="2000" useStatementNamespaces="true" />
+	<typeHandler jdbcType="BLOB" javaType="[B"
+		callback="org.springframework.orm.ibatis.support.BlobByteArrayTypeHandler" />
+	<typeHandler jdbcType="CLOB" javaType="java.lang.String"
+		callback="org.springframework.orm.ibatis.support.ClobStringTypeHandler" />
+		
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/address_info_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/cart_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/product_detail_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/product_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/type_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/trade_order_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/user_info_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/wuliu_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/color_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/size_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/store_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/product_size_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/product_color_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/video_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/merchant_info_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/ex/product_ex_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/ex/type_ex_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/ex/store_ex_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/ex/cart_ex_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/ex/user_info_ex_SqlMap.xml"/>
+	<sqlMap resource="cn/guddqs/peakshop/sqlmap/ex/trade_order_ex_SqlMap.xml"/>
+	<!-- generate start --><!--
+maps_xml_generate
+	--><!-- generate end -->
+
+</sqlMapConfig>

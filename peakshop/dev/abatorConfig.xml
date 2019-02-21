@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE abatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Abator for iBATIS Configuration 1.0//EN" "http://ibatis.apache.org/dtd/abator-config_1_0.dtd" >
+<abatorConfiguration>
+	<abatorContext >
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://123.207.30.64:3306/test" 
+			userId="root">
+			<classPathEntry location="E:/mysql-connector-java-5.1.21.jar" />
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="cn.guddqs.peakshop.entity" targetProject="peakshop/src" />
+   		<sqlMapGenerator targetPackage="cn.guddqs.peakshop.sqlmap" targetProject="peakshop/src" />
+    	<daoGenerator targetPackage="cn.guddqs.peakshop.dao" targetProject="peakshop/src" type="SPRING" />
+		
+		<table schema="" tableName="address_info" ></table>
+		<table schema="" tableName="cart" ></table>
+		<table schema="" tableName="product" ></table>
+		<table schema="" tableName="trade_order" ></table>
+		<table schema="" tableName="type" ></table>
+		<table schema="" tableName="user_info" ></table>
+		<table schema="" tableName="wuliu" ></table>
+		<table schema="" tableName="product_detail" ></table>
+		<table schema="" tableName="color" ></table>
+		<table schema="" tableName="size" ></table>
+		<table schema="" tableName="store" ></table>
+		<table schema="" tableName="product_color" ></table>
+		<table schema="" tableName="product_size" ></table>
+	</abatorContext>
+</abatorConfiguration>
