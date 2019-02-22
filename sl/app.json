@@ -7,6 +7,7 @@
     "pages/index/hot/hot",
     "pages/index/discount/discount",
     "pages/index/new/new",
+	"pages/index/groupbuy/groupbuy",
     "pages/cart/cart",
     "pages/order/detail",
     "pages/addr/edit/edit",

@@ -17,7 +17,7 @@ Page({
     var that = this;
     var orderId = that.data.orderId;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/order/getOrder.do?orderId='+orderId,
+      url: app.host.currentHost +'/peakshop/order/getOrder.do?orderId='+orderId,
       method:'get',
       header: {
         'Content-Type':  'application/x-www-form-urlencoded'

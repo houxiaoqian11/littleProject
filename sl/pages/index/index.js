@@ -6,8 +6,8 @@ Page({
     typeList: [],
     newProduct:[],
     hotProduct:[],
-    discountProduct:[]
-
+    discountProduct:[],
+    groupbuyProduct:[]
   },
     onShow: function () {
     // 页面显示
@@ -24,7 +24,8 @@ Page({
           typeList: res.data.typeList,
           newProduct: res.data.newProduct,
           hotProduct: res.data.hotProduct,
-          discountProduct: res.data.discountProduct
+          discountProduct: res.data.discountProduct,
+          groupbuyProduct: res.data.groupbuyProduct
         })
       },
       fail: function () {
@@ -49,7 +50,7 @@ Page({
   },
   onShareAppMessage: function (e) {
     return {
-      title: "猴哥数码城",
+      title: "PEAK专卖",
       desc: "我的第一个小程序"
     }
   },
