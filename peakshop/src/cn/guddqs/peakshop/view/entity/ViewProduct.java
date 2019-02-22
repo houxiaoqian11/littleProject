@@ -29,6 +29,9 @@ public class ViewProduct extends Product {
 		this.setIsShow(product.getIsShow());
 		this.setIsDiscount(product.getIsDiscount());
 		this.setProductNo(product.getProductNo());
+		this.setIsGroupbuy(product.getIsGroupbuy());
+		this.setGroupbuyNum(product.getGroupbuyNum());
+		this.setGroupbuyPrice(product.getGroupbuyPrice());
 	}
 	//商品详情
     private List<ProductDetail> details;
