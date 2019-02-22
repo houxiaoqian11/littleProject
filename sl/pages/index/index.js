@@ -14,7 +14,7 @@ Page({
       console.log("从服务端获取类型");
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/index/getlist.do',
+      url: app.host.currentHost +'/peakshop/index/getlist.do',
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

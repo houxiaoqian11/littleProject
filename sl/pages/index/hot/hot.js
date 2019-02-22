@@ -1,4 +1,5 @@
 // pages/index/hot/hot.js
+var app = getApp()
 Page({
   data: {
     productlist: [],
@@ -20,7 +21,7 @@ Page({
     var that = this;  
     
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/hot/getlist.do',
+      url: app.host.currentHost +'/peakshop/hot/getlist.do',
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -70,7 +71,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/hot/getlist.do?keyword=' + keyword,
+      url: app.host.currentHost +'/peakshop/hot/getlist.do?keyword=' + keyword,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

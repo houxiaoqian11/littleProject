@@ -52,7 +52,7 @@ Page( {
     //获取用户订单数据
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/order/getNum.do',
+      url: app.host.currentHost+'/peakshop/order/getNum.do',
       method:'post',
       data: {
         userId:app.d.userId,

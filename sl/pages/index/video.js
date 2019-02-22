@@ -1,3 +1,4 @@
+var app = getApp()
 Page({
   data:{
     path:""
@@ -11,7 +12,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/video/get.do',
+      url: app.host.currentHost +'/peakshop/video/get.do',
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

@@ -41,7 +41,7 @@ removeOrder:function(e){
       content: '你确定要取消订单吗？',
       success: function(res) {
         res.confirm && wx.request({
-          url: 'https://www.hxqzsr.club/peakshop/order/changeStatus.do?orderId='+orderId+'&status='+9,
+          url: app.host.currentHost +'/peakshop/order/changeStatus.do?orderId='+orderId+'&status='+9,
           method:'get',
           header: {
             'Content-Type':  'application/x-www-form-urlencoded'
@@ -80,7 +80,7 @@ removeOrder:function(e){
 	  var that = this;
     var orderId = e.currentTarget.dataset.orderId;
 	   wx.request({
-        url: 'https://www.hxqzsr.club/peakshop/pay/pay.do?id=' + orderId,
+        url: app.host.currentHost +'/peakshop/pay/pay.do?id=' + orderId,
         method: 'get',
         header: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -150,7 +150,7 @@ recOrder:function(e){
       content: '你确定已收到宝贝吗？',
       success: function(res) {
         res.confirm && wx.request({
-          url: 'https://www.hxqzsr.club/peakshop/order/changeStatus.do?orderId='+orderId+'&status='+3,
+          url: app.host.currentHost +'/peakshop/order/changeStatus.do?orderId='+orderId+'&status='+3,
           method:'get',
           header: {
             'Content-Type':  'application/x-www-form-urlencoded'
@@ -189,7 +189,7 @@ recOrder:function(e){
     var userId = app.d.userId;
     var status = that.data.isStatus;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/order/getList.do?userId='+userId+'&status='+status,
+      url: app.host.currentHost +'/peakshop/order/getList.do?userId='+userId+'&status='+status,
       method:'get',
       header: {
         'Content-Type':  'application/x-www-form-urlencoded'

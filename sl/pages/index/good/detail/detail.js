@@ -38,7 +38,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/detail/get.do?id=' + id,
+      url: app.host.currentHost +'/peakshop/detail/get.do?id=' + id,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -126,7 +126,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/detail/addToCart.do?productId=' + productId + '&colorId=' + colorId +'&sizeId='+sizeId+'&userId='+userId,
+      url: app.host.currentHost +'/peakshop/detail/addToCart.do?productId=' + productId + '&colorId=' + colorId +'&sizeId='+sizeId+'&userId='+userId,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -201,7 +201,7 @@ Page({
     console.log("changeColo--> colorID:", colorId)
     var that = this;
      wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/store/getStore.do?colorId=' + colorId+'&sizeId='+sizeId+'&productId='+productId,
+      url: app.host.currentHost +'/peakshop/store/getStore.do?colorId=' + colorId+'&sizeId='+sizeId+'&productId='+productId,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -228,7 +228,7 @@ Page({
     })
     
      wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/detail/get.do?id=' + productId+'&colorId=' + colorId,
+      url: app.host.currentHost +'/peakshop/detail/get.do?id=' + productId+'&colorId=' + colorId,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -267,7 +267,7 @@ Page({
     console.log("changeSize--> sizeID:", sizeId)
     var that = this;
      wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/store/getStore.do?colorId=' + colorId+'&sizeId='+sizeId+'&productId='+productId,
+      url: app.host.currentHost +'/peakshop/store/getStore.do?colorId=' + colorId+'&sizeId='+sizeId+'&productId='+productId,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

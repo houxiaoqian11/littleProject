@@ -36,7 +36,7 @@ Page({
     var cartId = that.data.cartId;
     var addrId = that.data.addrId;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/pay/buy.do?cartIdStr=' + cartId + '&addrId=' + addrId,
+      url: app.host.currentHost +'/peakshop/pay/buy.do?cartIdStr=' + cartId + '&addrId=' + addrId,
       method: 'get',
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -117,7 +117,7 @@ Page({
     var remark = that.data.remark;
     var addrId = that.data.addrId;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/pay/createOrder.do?cartIdStr=' + cartId + '&remark=' + remark + '&addrId=' + addrId,
+      url: app.host.currentHost +'/peakshop/pay/createOrder.do?cartIdStr=' + cartId + '&remark=' + remark + '&addrId=' + addrId,
       method: 'get',
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'

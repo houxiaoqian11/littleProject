@@ -1,4 +1,5 @@
 // pages/index/product/product.js
+var app = getApp()
 Page({
   data: {
     typelist: [],
@@ -31,7 +32,7 @@ Page({
     var that = this;
     
      wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/good/getTypeList.do',
+      url: app.host.currentHost +'/peakshop/good/getTypeList.do',
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -58,7 +59,7 @@ Page({
     })
     
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/good/getProductList.do?typeId=' + id,
+      url: app.host.currentHost +'/peakshop/good/getProductList.do?typeId=' + id,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -110,7 +111,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/good/getProductList.do?typeId=' + id,
+      url: app.host.currentHost +'/peakshop/good/getProductList.do?typeId=' + id,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -147,7 +148,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/good/getProductList.do?typeId=' + id + '&keyword=' + keyword,
+      url: app.host.currentHost +'/peakshop/good/getProductList.do?typeId=' + id + '&keyword=' + keyword,
       // data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

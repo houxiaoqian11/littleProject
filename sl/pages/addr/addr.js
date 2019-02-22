@@ -17,7 +17,7 @@ Page({
       duration: 300000
     })
     wx.request({
-      url: 'https://www.hxqzsr.club/peakshop/address/getlist.do?userId=' + userId,
+      url: app.host.currentHost +'/peakshop/address/getlist.do?userId=' + userId,
       //data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -90,7 +90,7 @@ Page({
       })
       var that = this;
       wx.request({
-        url: 'https://www.hxqzsr.club/peakshop/address/bedefault.do?id=' + id + '&userId=' + userId,
+        url: app.host.currentHost +'/peakshop/address/bedefault.do?id=' + id + '&userId=' + userId,
         // data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         header: {
@@ -165,7 +165,7 @@ Page({
             duration: 900000
           })
           wx.request({
-            url: 'https://www.hxqzsr.club/peakshop/address/del.do?id=' + id,
+            url: app.host.currentHost +'/peakshop/address/del.do?id=' + id,
             data: {},
             method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
             // header: {}, // 设置请求的 header

@@ -1,7 +1,7 @@
 // app.js
 App({
   d: {   
-    userId:''
+    userId:'10'
   },
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -37,6 +37,9 @@ App({
       });
     }
   },
+  host:{
+    currentHost:'http://123.207.30.64:8080'
+  },
 
 
   getUserSessionKey:function(code,nickName){
@@ -61,7 +64,7 @@ App({
         
         that.globalData.userInfo['sessionId'] = data.session_key;
         that.globalData.userInfo['openid'] = data.openid;
-        that.d.userId = data.userId;
+        // that.d.userId = data.userId;
       },
       fail:function(e){
         wx.showToast({
