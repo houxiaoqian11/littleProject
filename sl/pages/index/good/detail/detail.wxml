@@ -16,8 +16,8 @@
 
       <view wx:if="{{product.isGroupbuy==0}}">
           <span class="jiage">¥：{{product.price}}</span> 
+          <span class="jiage">参团人数：{{product.groupbuyNum}}</span>
           <span class="store">库存：{{store}}</span> 
-          <span class="store">参团人数：{{product.groupNum}}</span>
       </view>
       <view wx:else>
             <span class="jiage">¥：{{product.price}}</span> 
